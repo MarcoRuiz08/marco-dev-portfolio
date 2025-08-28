@@ -1,6 +1,7 @@
 #include <string>
 #include <map>
 #include <unordered_map>
+#include <stdexcept>
 
 using namespace std;
 

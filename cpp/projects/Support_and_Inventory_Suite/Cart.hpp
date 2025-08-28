@@ -2,6 +2,10 @@
 #include <vector>
 #include <utility>
 #include <string>
+#include <stdexcept>
+#include <algorithm>
+
+#include "CartLine.hpp"
 
 class Cart {
     private:
@@ -17,4 +21,4 @@ class Cart {
     void remove(const std::string& productId);
     double subtotal() const;
     size_t countTimes() const;
-}
+};
