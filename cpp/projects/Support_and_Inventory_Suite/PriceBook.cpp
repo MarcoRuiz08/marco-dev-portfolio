@@ -1,9 +1,5 @@
 #include "PriceBook.hpp"
 
-PriceBook::PriceBook() {
-
-};
-
 bool PriceBook::hasPrice(const string& productId) const noexcept {
     return priceByProduct.find(productId) != priceByProduct.end();
 };

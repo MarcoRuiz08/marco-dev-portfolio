@@ -21,4 +21,13 @@ class CartLine {
     double lineTotal() const {
         return static_cast<double>(qty) * unitPrice;
     }
+    
+    const Product& getProduct() const noexcept { return product; }
+    const std::string& getProductId() const noexcept { return product.getId(); }
+    int getQty() const noexcept { return qty;}
+    int getUnitPrice() const noexcept { return unitPrice;}
+    void addQty(int delta) {
+        if (delta <= 0) throw std::invalid_argument("delta must be > 0");
+        qty += delta;
+    }
 };

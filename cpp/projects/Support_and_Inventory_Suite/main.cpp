@@ -1,5 +1,6 @@
 #include <iostream>
 
-int manin() {
+int main() {
+    std::cout << "OK\n";
     return 0;
 }
