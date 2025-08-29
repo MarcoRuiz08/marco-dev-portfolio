@@ -10,6 +10,10 @@ std::string CardPayment::getAuthCode() const noexcept {
     return authCode;
 };
 
+std::string CardPayment::typePayment() const {
+    return "card";
+};
+
 bool CardPayment::authorize(double amount) {
     if(amount <= 0) {
         throw std::invalid_argument("Amoutn must be greater than 0");
