@@ -1,6 +1,13 @@
 #include <stdexcept>
+#include <utility>
 
 #include "CardPayment.hpp"
+
+CardPayment::CardPayment(std::string maskedCard) : maskedCard(std::move(maskedCard)), authCode() {
+    if (this->maskedCard.empty()) {
+        throw std::invalid_argument("maskedCard must not be empty");
+    }
+};
 
 std::string CardPayment::getMaskedCard() const noexcept {
     return maskedCard;
